@@ -16,7 +16,7 @@ class Robot
       instructions = instructions.split('')
     end
 
-    raise 'Wrong directions.' unless is_valid?(instructions)
+    raise 'Wrong directions.' unless instructions_valid?(instructions)
 
     instructions.each do |instruction|
       case instruction
@@ -85,7 +85,7 @@ class Robot
 
   private
 
-  def is_valid?(directions)
+  def instructions_valid?(directions)
     directions.all? do |direction|
       [FORWARD_INSTRUCTION, RIGHT_INSTRUCTION, LEFT_INSTRUCTION].include? direction
     end

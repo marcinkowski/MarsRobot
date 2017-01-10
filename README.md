@@ -30,6 +30,11 @@ The maximum value for any coordinate is 50. All instruction strings will be less
 For each robot position/instruction in the input, the output should indicate the final grid position and orientation of
 the robot. If a robot falls off the edge of the grid the word “LOST” should be printed after the position and orientation.
 
+##  To Install Dependencies:
+```
+$ bundle install
+```
+
 ## To Run Rspec
 ```sh
 $ rspec
@@ -37,4 +42,10 @@ $ rspec
 ## To read instructions from the file
 ```sh
 $ ruby read.rb instructions/demo
+```
+
+## To run it with Docker
+```
+$ docker build -t mars_robot .
+$ docker run --rm mars_robot
 ```
